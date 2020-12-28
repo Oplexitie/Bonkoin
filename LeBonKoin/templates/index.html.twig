@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{title}} {% endblock %}
+
+{% block body %}
+<h1>{{ title }}</h1>
+<a href="{{ path('saymyname', { name: 'Aurélien'}) }}">SAY MY NAME</a>
+<a href="{{ path('api_index') }}">Go to not the homepage</a>
+{% endblock %}
+
+{% block p %}
+{{ parent() }}
+<script src="{{asset('javascript/bousin3000.js')}}"> </script>
+{% endblock%}
